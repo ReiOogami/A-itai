@@ -19,4 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/matching',['as' => 'Matching', 'uses' => 'Aitai@matching']);
 
+Route::get('/getuser',['as' => 'getUser','uses' => 'Aitai@getAllUser']);
+
 Route::get('/demo',['as' => 'Demo','uses' => 'Aitai@demo']);

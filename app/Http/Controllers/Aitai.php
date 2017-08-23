@@ -75,4 +75,12 @@ class Aitai extends Controller
         return response()->json('true');
     }
     
+    public function getAllUser(Request $request)
+    {
+        $name = $request->name;
+
+        $userData = App\Waiting::where('name','!=',$name)->get();
+    
+        return response()->json($userData);
+    }
 }
